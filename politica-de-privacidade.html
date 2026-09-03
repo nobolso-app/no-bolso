@@ -25,7 +25,7 @@
 </head>
 <body>
 <h1>Política de Privacidade — No Bolso</h1>
-<p class="meta"><strong>Última atualização:</strong> 27 de julho de 2026<br>
+<p class="meta"><strong>Última atualização:</strong> 1º de setembro de 2026<br>
 <strong>Responsável:</strong> Silvana de Britto Camargo<br>
 <strong>Contato:</strong> nobolso.app@gmail.com</p>
 
@@ -38,12 +38,20 @@ sequer possui permissão de internet.</p>
 <ul>
 <li><strong>Conteúdo da tela do app Rota 77 Motorista</strong>, lido pelo
 serviço de acessibilidade do Android exclusivamente enquanto o app
-Rota 77 está em uso: valores, distâncias, tempos e endereços das ofertas
-e corridas exibidas. No Bolso <strong>não lê nenhum outro
-aplicativo</strong> — a leitura é restrita, por filtro de pacote, ao app
-Rota 77 Motorista.</li>
+Rota 77 está em uso: valores, distâncias, tempos e <strong>endereços</strong>
+das ofertas e corridas exibidas, e o desfecho de cada oferta (aceita,
+recusada, perdida para outro motorista, concluída). No Bolso <strong>não
+lê nenhum outro aplicativo</strong> — a leitura é restrita, por filtro de
+pacote no nível do sistema operacional, ao app Rota 77 Motorista.</li>
 <li><strong>Dados digitados por você</strong> nos Ajustes: custos do
 veículo, metas, limiares, despesas e itens de manutenção.</li>
+<li><strong>Um identificador do aparelho</strong> (o <code>ANDROID_ID</code>
+do Android), usado somente para gerar o "código do aparelho" do sistema
+de licença — ver a seção 7. Ele <strong>não é</strong> o número do seu
+telefone, não é o IMEI e não identifica você: é um número que o próprio
+Android sorteia para cada app em cada aparelho, e que muda se o aparelho
+for restaurado de fábrica. Ele <strong>não sai do aparelho sozinho</strong>;
+só se você mesmo o copiar e enviar para comprar uma licença.</li>
 </ul>
 
 <h2>2. Onde os dados ficam</h2>
@@ -54,25 +62,68 @@ são gravados na pasta Downloads/NoBolso do próprio aparelho, sob seu
 controle — compartilhá-los (por WhatsApp, Drive etc.) é uma ação manual
 sua.</p>
 
+<p>O <strong>backup automático do Android está desligado</strong> para
+este app: nada do banco de dados sobe para a nuvem do Google. A cópia
+direta entre dois celulares na troca de aparelho continua funcionando —
+ela é local, do seu celular para o seu celular novo, sem passar por
+servidor.</p>
+
+<p>Os <strong>endereços</strong> lidos da oferta ficam apenas no banco
+local: eles <strong>não entram nos arquivos de backup nem nos
+relatórios</strong>. O arquivo exportado leva só o <strong>bairro</strong>
+de embarque e de destino, nunca o endereço — assim um arquivo
+compartilhado nunca carrega o endereço de um passageiro.</p>
+
 <h2>3. O que o app NÃO faz</h2>
 <ul>
-<li>Não coleta dados pessoais, de localização, de contatos ou de
-qualquer outro aplicativo;</li>
-<li>Não aceita, recusa ou toca em nada por você no app Rota 77 — a
-leitura é passiva e a decisão é sempre do motorista;</li>
-<li>Não exibe anúncios, não usa rastreadores, não usa serviços de
-análise (analytics) de terceiros;</li>
-<li>Não compartilha nem vende dados — não há o que compartilhar, pois
-nada sai do aparelho.</li>
+<li>Não envia nada para fora do aparelho — não há servidor, não há conta,
+não há login, e o app <strong>não possui a permissão de internet</strong>;</li>
+<li>Não usa o GPS nem o serviço de localização do Android. Os endereços
+que aparecem no histórico são os que o próprio app Rota 77 já exibe na
+tela da oferta (seção 1) — o No Bolso não rastreia onde você está;</li>
+<li>Não lê contatos, mensagens, agenda, fotos, nem qualquer outro
+aplicativo além do Rota 77 Motorista;</li>
+<li>Não aceita, recusa ou toca em nada por você no app Rota 77 — o app
+<strong>observa</strong> a sua decisão para registrá-la no seu histórico,
+e a decisão é sempre sua;</li>
+<li>Não exibe anúncios, não usa rastreadores, não usa serviços de análise
+(analytics) de terceiros;</li>
+<li>Não compartilha nem vende dados.</li>
 </ul>
 
 <h2>4. Nomes de passageiros</h2>
+<p>O app <strong>não guarda nomes de passageiros</strong> no seu
+histórico.</p>
+
 <p>O modo opcional de calibração ("Modo Inspetor", desligado por padrão)
 grava arquivos de diagnóstico locais com o texto das telas lidas; nesses
-arquivos, <strong>nomes de passageiros são ocultados
-automaticamente</strong> antes da gravação.</p>
+arquivos, <strong>nomes de passageiros são ocultados automaticamente</strong>
+antes da gravação.</p>
 
-<h2>5. Controle e exclusão dos dados</h2>
+<h2>5. Serviço de acessibilidade</h2>
+<p>O app usa a API de acessibilidade do Android para duas coisas, ambas
+restritas ao app Rota 77 Motorista:</p>
+<ol>
+<li><strong>Ler</strong> as telas desse app — a oferta que chega, a
+corrida em andamento, a fila e a lista de ganhos — para calcular o lucro
+e manter o seu histórico financeiro correto;</li>
+<li><strong>Desenhar</strong> o selo sobre a tela. Essa é a forma prevista
+pelo Android para um serviço de acessibilidade mostrar informação
+sobreposta, e foi escolhida por ser a menos invasiva: ela dispensa a
+permissão de "desenhar sobre outros apps", que daria ao No Bolso o poder
+de se sobrepor a qualquer aplicativo do aparelho.</li>
+</ol>
+
+<p>O serviço <strong>nunca executa ações</strong> no app Rota 77: não
+clica, não aceita e não recusa corridas. Ele recebe o aviso de que
+<strong>você</strong> tocou num botão ("Aceitar", "Recusar", "Finalizar
+corrida") apenas para registrar o desfecho da oferta no seu histórico.</p>
+
+<p>Esse uso é divulgado de forma destacada no primeiro uso do app, com
+consentimento explícito, e pode ser revogado a qualquer momento em
+Configurações do Android → Acessibilidade.</p>
+
+<h2>6. Controle e exclusão dos dados</h2>
 <p>Você pode, a qualquer momento:</p>
 <ul>
 <li>Apagar o histórico pelo próprio app (Histórico → Limpar);</li>
@@ -82,33 +133,47 @@ quando a pasta tinha esse nome);</li>
 <li>Desinstalar o app, o que remove o banco de dados local por
 completo.</li>
 </ul>
-<p>Como nenhum dado é enviado ao desenvolvedor, não existe cópia externa
-a ser excluída.</p>
 
-<h2>6. Serviço de acessibilidade</h2>
-<p>O app usa a API de acessibilidade do Android como tecnologia de
-leitura de tela, com uma única finalidade: identificar a oferta exibida
-pelo app Rota 77 Motorista e calcular o lucro mostrado no selo. Esse uso
-é divulgado de forma destacada no primeiro uso do app e pode ser
-revogado a qualquer momento em Configurações do Android →
-Acessibilidade.</p>
+<p>Fora a exceção da seção 7, nenhum dado seu é enviado ao desenvolvedor,
+e portanto não existe cópia externa a ser excluída.</p>
 
-<h2>7. Crianças</h2>
+<h2>7. Se você comprar uma licença</h2>
+<p>Esta seção vale apenas para quem obtém o app <strong>diretamente com o
+desenvolvedor</strong>, fora da loja de aplicativos.</p>
+
+<p>Para receber um código de licença, você envia (por mensagem, por sua
+própria ação) o <strong>código do aparelho</strong> mostrado nos Ajustes.
+Ao emitir a licença, ficam registrados, no aparelho do desenvolvedor: o
+<strong>apelido</strong> que você informar, o <strong>código do
+aparelho</strong>, o <strong>valor pago</strong>, a data e o prazo
+contratado. Não há nome completo, telefone, e-mail, CPF nem dado de
+pagamento nesse registro.</p>
+
+<p>Esse registro serve para saber quem tem licença ativa e quando ela
+vence. Ele <strong>não é enviado a ninguém</strong> e não sai do aparelho
+do desenvolvedor, exceto num arquivo de backup que ele mesmo guarda. Para
+pedir a exclusão do seu registro, escreva para nobolso.app@gmail.com.</p>
+
+<p>O código de licença é gerado e conferido <strong>dentro do
+aparelho</strong>, sem internet e sem servidor.</p>
+
+<h2>8. Crianças</h2>
 <p>O app é destinado a motoristas profissionais e não é direcionado a
 menores de idade.</p>
 
-<h2>8. Alterações desta política</h2>
+<h2>9. Alterações desta política</h2>
 <p>Alterações serão publicadas nesta mesma página, com a data de
 atualização no topo. Mudanças relevantes serão destacadas na descrição
 da versão na Play Store.</p>
 
-<h2>9. Contato</h2>
+<h2>10. Contato</h2>
 <p>Dúvidas sobre esta política: nobolso.app@gmail.com.</p>
 
 <footer>O No Bolso não é afiliado ao Rota 77. "Rota 77" é
 marca de seus respectivos donos. Esta política observa a Lei Geral de
-Proteção de Dados (LGPD, Lei 13.709/2018); como o app não realiza
-tratamento de dados pessoais fora do aparelho do usuário, não há
-operações de tratamento a reportar.</footer>
+Proteção de Dados (LGPD, Lei 13.709/2018). O tratamento de dados pessoais
+ocorre no aparelho do próprio usuário e sob o controle dele; a única
+exceção é o registro descrito na seção 7, cujo titular pode solicitar
+exclusão pelo contato acima.</footer>
 </body>
 </html>
