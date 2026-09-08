@@ -25,8 +25,8 @@
 </head>
 <body>
 <h1>Política de Privacidade — No Bolso</h1>
-<p class="meta"><strong>Última atualização:</strong> 1º de setembro de 2026<br>
-<strong>Responsável:</strong> Silvana de Britto Camargo<br>
+<p class="meta"><strong>Última atualização:</strong> 8 de setembro de 2026<br>
+<strong>Responsável:</strong> No Bolso (Mateus Camargo Lodi)<br>
 <strong>Contato:</strong> nobolso.app@gmail.com</p>
 
 <p class="resumo"><strong>Resumo em uma frase:</strong> No Bolso
@@ -71,8 +71,9 @@ servidor.</p>
 <p>Os <strong>endereços</strong> lidos da oferta ficam apenas no banco
 local: eles <strong>não entram nos arquivos de backup nem nos
 relatórios</strong>. O arquivo exportado leva só o <strong>bairro</strong>
-de embarque e de destino, nunca o endereço — assim um arquivo
-compartilhado nunca carrega o endereço de um passageiro.</p>
+de embarque e de destino, nunca o endereço — assim o <strong>backup</strong>
+que você compartilha nunca carrega o endereço de um passageiro. A única
+exceção é o Modo Inspetor, descrito na seção 4.</p>
 
 <h2>3. O que o app NÃO faz</h2>
 <ul>
@@ -100,19 +101,39 @@ grava arquivos de diagnóstico locais com o texto das telas lidas; nesses
 arquivos, <strong>nomes de passageiros são ocultados automaticamente</strong>
 antes da gravação.</p>
 
+<p><strong>Esses arquivos são a exceção da seção 2.</strong> Eles guardam
+o texto da tela como ele apareceu, e isso inclui <strong>os endereços das
+corridas daquele dia</strong> — o que é ocultado ali é o nome, não o
+endereço. Por isso o modo vem desligado: ligue só quando for combinar uma
+calibração, e apague os arquivos de <code>Downloads/NoBolso</code>
+depois. Eles ficam no seu aparelho e só saem de lá se você mesmo
+enviar.</p>
+
 <h2>5. Serviço de acessibilidade</h2>
-<p>O app usa a API de acessibilidade do Android para duas coisas, ambas
-restritas ao app Rota 77 Motorista:</p>
+<p>O app usa a API de acessibilidade do Android para duas coisas:</p>
 <ol>
-<li><strong>Ler</strong> as telas desse app — a oferta que chega, a
-corrida em andamento, a fila e a lista de ganhos — para calcular o lucro
-e manter o seu histórico financeiro correto;</li>
-<li><strong>Desenhar</strong> o selo sobre a tela. Essa é a forma prevista
-pelo Android para um serviço de acessibilidade mostrar informação
-sobreposta, e foi escolhida por ser a menos invasiva: ela dispensa a
-permissão de "desenhar sobre outros apps", que daria ao No Bolso o poder
-de se sobrepor a qualquer aplicativo do aparelho.</li>
+<li><strong>Ler</strong> as telas do app Rota 77 Motorista — <strong>e
+somente dele</strong>: a oferta que chega, a corrida em andamento, a fila
+e a lista de ganhos — para calcular o lucro e manter o seu histórico
+financeiro correto;</li>
+<li><strong>Desenhar</strong> por cima da tela. São dois desenhos, e eles
+se comportam de formas diferentes:
+<ul>
+<li>o <strong>selo</strong> e a faixa da fila, que só aparecem enquanto o
+Rota 77 está na tela e somem quando ele sai;</li>
+<li>a <strong>bolha do copiloto</strong> — o ícone do app flutuando na
+borda —, que fica visível <strong>também sobre outros aplicativos</strong>,
+para lembrar que a leitura está ligada e servir de atalho.
+<strong>Ela não lê nada:</strong> mostra só o ícone e a cor do último
+veredicto, e você pode desligá-la em Ajustes → Selo na tela → Bolha do
+copiloto.</li>
+</ul>
+</li>
 </ol>
+
+<p>Desenhar por essa via foi escolhido por ser o caminho <strong>menos
+invasivo</strong>: ele dispensa a permissão "desenhar sobre outros apps",
+que daria ao app poderes muito maiores sobre a tela do aparelho.</p>
 
 <p>O serviço <strong>nunca executa ações</strong> no app Rota 77: não
 clica, não aceita e não recusa corridas. Ele recebe o aviso de que
@@ -134,8 +155,16 @@ quando a pasta tinha esse nome);</li>
 completo.</li>
 </ul>
 
-<p>Fora a exceção da seção 7, nenhum dado seu é enviado ao desenvolvedor,
-e portanto não existe cópia externa a ser excluída.</p>
+<p><strong>O app nunca envia nada sozinho.</strong> Fora a exceção da
+seção 7, o desenvolvedor só recebe alguma coisa sua <strong>se você
+mandar</strong>: pelo botão "Compartilhar diagnóstico" dos Ajustes, que
+leva um relatório técnico sem endereços e sem valores de corrida, ou por
+um arquivo do Modo Inspetor, se você tiver ligado esse modo e resolvido
+enviá-lo. Nos dois casos é você quem escolhe o destinatário, no seletor
+do próprio Android.</p>
+
+<p>Para pedir a exclusão de algo que você já tenha enviado, escreva para
+<strong>nobolso.app@gmail.com</strong>.</p>
 
 <h2>7. Se você comprar uma licença</h2>
 <p>Esta seção vale apenas para quem obtém o app <strong>diretamente com o
