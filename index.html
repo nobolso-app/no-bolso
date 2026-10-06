@@ -28,6 +28,14 @@
           background: #0f6e56; color: #fff; border-radius: 12px;
           font-weight: 700; text-decoration: none; }
   footer { margin-top: 3rem; font-size: 0.85rem; color: #6b8285; }
+  .faq { text-align: left; margin-top: 3rem; }
+  .faq h2 { text-align: center; font-size: 1.3rem; color: #0d3b40; }
+  .faq details { border-top: 1px solid #d5e2e0; padding: 10px 0; }
+  .faq details:last-of-type { border-bottom: 1px solid #d5e2e0; }
+  .faq summary { cursor: pointer; font-weight: 700; color: #1c2b2d; }
+  .faq p, .faq li { color: #33494c; margin: 8px 0; }
+  .faq ol { padding-left: 1.3rem; }
+  .faq .passo { color: #0f6e56; font-weight: 700; }
   @media (prefers-color-scheme: dark) {
     body { background: #0e1b1d; color: #d8e6e5; }
     h1 { color: #9fd4cd; }
@@ -35,6 +43,11 @@
     a { color: #7fd0c2; }
     .loja { background: #35c26b; color: #0e1b1d; }
     footer { color: #7d9a97; }
+    .faq h2 { color: #9fd4cd; }
+    .faq details { border-color: #27403e; }
+    .faq summary { color: #d8e6e5; }
+    .faq p, .faq li { color: #b6cccb; }
+    .faq .passo { color: #7fd0c2; }
   }
 </style>
 </head>
@@ -57,7 +70,108 @@ oferta com as que você já recebeu. Abaixo dela, o que sobra por hora depois
 de descontar energia, desgaste e o caminho até o passageiro.</p>
 <p><a class="loja" id="loja" href="https://play.google.com/store/apps/details?id=br.com.nobolso">Baixar na Google Play</a></p>
 <p><a href="politica-de-privacidade.html">Política de privacidade</a> ·
-Contato: nobolso.app@gmail.com</p>
+Contato: <a href="mailto:nobolso.app@gmail.com">nobolso.app@gmail.com</a> — quem responde é o
+motorista que fez o app, entre uma corrida e outra; pode levar um dia.</p>
+<section class="faq" id="perguntas">
+<h2>Perguntas de quem está começando</h2>
+
+<details>
+<summary>Em que celular funciona?</summary>
+<p>Android 10 ou mais novo, com o app <strong>Rota77 — Motorista Parceiro</strong>
+instalado. Não existe versão para iPhone. O No Bolso lê a tela do Rota 77:
+sem o Rota 77 no celular, ele não tem o que ler.</p>
+</details>
+
+<details>
+<summary>Como instalar e ligar?</summary>
+<ol>
+<li>Baixe pela Google Play, no botão acima, e abra o app. Ele te guia.</li>
+<li><span class="passo">Leitor de tela:</span> é por ele que o app enxerga a oferta.
+Toque em <strong>"Ativar o leitor de tela"</strong>, leia o aviso e toque em
+<strong>"Entendi e concordo"</strong> → <strong>"Abrir configurações de
+acessibilidade"</strong> → ache <strong>No Bolso</strong> na lista (em alguns
+celulares fica dentro da seção de apps instalados ou baixados) → ligue
+<strong>"Usar No Bolso"</strong> → <strong>"Permitir"</strong>. O Android mostra um
+aviso forte: é o padrão dele para todo app desse tipo. Depois volte ao No Bolso e
+toque em <strong>"Continuar"</strong>.</li>
+<li><span class="passo">Custos do seu carro:</span> combustível ou elétrico, o preço,
+o consumo, a manutenção e a mensalidade do Rota. É daí que sai o lucro de verdade —
+o app não adivinha o seu carro.</li>
+<li><span class="passo">Bateria:</span> na tela inicial aparece um aviso vermelho,
+<em>"A bateria pode desligar o No Bolso"</em>. Toque em <strong>"Abrir
+configurações"</strong>, entre na opção de bateria e deixe o app <strong>sem
+restrições</strong>. Sem isso, o Android pode desligar o app no meio do turno.
+O <em>"Agora não"</em> esconde o aviso por 30 dias, não resolve.</li>
+</ol>
+</details>
+
+<details>
+<summary>Instalei e não apareceu estrela. Está quebrado?</summary>
+<p>Não. A nota de 1 a 5 estrelas compara cada oferta com as que <strong>você</strong>
+já recebeu, e nos primeiros dias ainda não há com o que comparar. Até umas 30 ofertas,
+o selo mostra a cor em palavra — <em>"vale a pena"</em>, <em>"depende"</em>,
+<em>"não compensa"</em> — e <em>"sem nota ainda — aprendendo"</em>. A estrela chega
+sozinha, em geral depois de dois ou três turnos.</p>
+</details>
+
+<details>
+<summary>O selo não apareceu na oferta.</summary>
+<p>Abra o No Bolso e olhe a tela inicial, de cima para baixo:</p>
+<ul>
+<li>um cartão vermelho <em>"Leitor de tela desligado"</em> ou <em>"Falta o seu OK"</em>:
+toque no botão dele e siga o passo 2 de "Como instalar e ligar";</li>
+<li>o aviso da bateria: siga o passo 4. Em alguns celulares o Android desliga o app
+por conta própria quando a bateria está "otimizada";</li>
+<li>se tudo está ligado e o selo sumiu de repente, pode ser o Rota 77 que mudou a
+tela — isso acontece. Mande o relatório: Ajustes → Configurar uma vez → Avançado →
+<strong>"Diagnóstico do app"</strong> → <strong>"Compartilhar"</strong>. Ele não
+leva endereço nem valor de corrida.</li>
+</ul>
+</details>
+
+<details>
+<summary>O app aceita ou recusa corrida por mim?</summary>
+<p><strong>Nunca.</strong> Ele só mostra o selo; quem toca em Aceitar ou Recusar é
+você. Aceite automático derruba a conta do motorista em qualquer plataforma, e o No
+Bolso não faz isso em versão nenhuma.</p>
+</details>
+
+<details>
+<summary>Para onde vão os meus dados?</summary>
+<p>Para lugar nenhum. O app não tem acesso à internet: tudo fica no seu celular,
+e ele lê só a tela do Rota 77 — nenhum outro aplicativo. O que sai do celular é só
+o que você mesmo compartilhar: o relatório de problema, o backup, o cartão do dia.
+O detalhe está na <a href="politica-de-privacidade.html">política de privacidade</a>.</p>
+</details>
+
+<details>
+<summary>Quanto custa?</summary>
+<p>É grátis, sem anúncios e sem compras dentro do app.</p>
+</details>
+
+<details>
+<summary>Funciona com Uber, 99 ou inDrive?</summary>
+<p>Não. O No Bolso lê a tela do <strong>Rota 77</strong>, e só dela. O app do
+Rota 77 é o mesmo em todas as cidades em que ele atende; se na sua cidade algo
+sair errado, escreva para o e-mail abaixo com o nome da cidade.</p>
+</details>
+
+<details>
+<summary>Troquei de celular. Perco o histórico?</summary>
+<p>Não, se você tiver o backup. O app grava sozinho, todo dia, uma cópia em
+<strong>Downloads/NoBolso</strong>; copie essa pasta para o celular novo e, na
+apresentação do app, toque em <strong>"Já usava o app? Importar backup"</strong>.
+Pela Google Play, a atualização de versão não apaga nada.</p>
+</details>
+
+<details>
+<summary>Tem um bairro em que eu não entro.</summary>
+<p>Ajustes → <strong>Fim do turno e bairros</strong>: anote os bairros que você
+evita, e a oferta que embarca ou termina neles sai num selo discreto, cinza, sem
+nota e sem valores — <em>"Bairro fora do seu roteiro"</em>. Isso não entra na nota
+das outras corridas: é segurança, não lucro.</p>
+</details>
+</section>
 <footer>No Bolso é um app independente, <strong>não afiliado ao Rota 77</strong>. "Rota 77" é
 marca de seus respectivos donos.</footer>
 <script>
