@@ -55,10 +55,26 @@ tocar em nada. 100% offline, sem anúncios, gratuito.</p>
 <p>A primeira linha é a <strong>nota de 1 a 5 estrelas</strong>, que compara a
 oferta com as que você já recebeu. Abaixo dela, o que sobra por hora depois
 de descontar energia, desgaste e o caminho até o passageiro.</p>
-<p><a class="loja" href="https://play.google.com/store/apps/details?id=br.com.nobolso">Baixar na Google Play</a></p>
+<p><a class="loja" id="loja" href="https://play.google.com/store/apps/details?id=br.com.nobolso">Baixar na Google Play</a></p>
 <p><a href="politica-de-privacidade.html">Política de privacidade</a> ·
 Contato: nobolso.app@gmail.com</p>
 <footer>No Bolso é um app independente, <strong>não afiliado ao Rota 77</strong>. "Rota 77" é
 marca de seus respectivos donos.</footer>
+<script>
+// A origem do convite chega ao Play Console: as tags utm_ que vierem no
+// endereço desta página (?utm_source=convite&utm_medium=app, do convite do
+// app; ou as de um grupo, de um cartão com QR, de um anúncio) são repassadas
+// ao link da loja no parâmetro "referrer", que é o que o Console lê para
+// separar as instalações por origem. Sem tags, o link fica como está.
+(function () {
+  var tags = [];
+  new URLSearchParams(location.search).forEach(function (valor, chave) {
+    if (chave.indexOf("utm_") === 0 && valor) tags.push(chave + "=" + valor);
+  });
+  if (!tags.length) return;
+  var a = document.getElementById("loja");
+  if (a) a.href += "&referrer=" + encodeURIComponent(tags.join("&"));
+})();
+</script>
 </body>
 </html>
